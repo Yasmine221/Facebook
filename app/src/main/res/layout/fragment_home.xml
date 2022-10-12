@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HomeFragment">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/user_img"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:src="@drawable/images" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/post_txt"
+        android:layout_width="@dimen/_285sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:gravity="center_vertical"
+        android:hint="@string/what_s_on_your_mind"
+        android:paddingHorizontal="@dimen/_5sdp"
+        android:textColorHint="#757575"
+        app:layout_constraintStart_toEndOf="@id/user_img"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/post_txt"
+        android:background="#CED0D4" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/live_btn"
+        android:layout_width="@dimen/_105sdp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line"
+        android:backgroundTint="@color/white"
+        android:text="@string/live"
+        android:textColor="#65676B"
+        app:icon="@drawable/ic_baseline_video_camera_front_24"
+        app:iconTint="#FA3E3E"
+        tools:ignore="TextContrastCheck,TextContrastCheck" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/photos_btn"
+        android:layout_width="@dimen/_105sdp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/live_btn"
+        app:layout_constraintTop_toBottomOf="@id/line"
+        android:backgroundTint="@color/white"
+        android:text="@string/photos"
+        android:textColor="#65676B"
+        app:icon="@drawable/ic_baseline_photo_library_24"
+        app:iconTint="#89BE4C"
+        tools:ignore="TextContrastCheck" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/room_btn"
+        android:layout_width="@dimen/_105sdp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/line"
+        app:layout_constraintStart_toEndOf="@id/photos_btn"
+        android:backgroundTint="@color/white"
+        android:text="@string/room"
+        android:textColor="#65676B"
+        app:icon="@drawable/ic_baseline_video_call_24"
+        app:iconTint="#9360F7"
+        tools:ignore="TextContrastCheck,TextContrastCheck" />
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_8sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/photos_btn"
+        android:background="#C9CDCE" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/line2"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:listitem="@layout/post_item"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

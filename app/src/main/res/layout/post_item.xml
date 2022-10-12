@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginVertical="@dimen/_10sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_item"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        tools:src="@drawable/images"
+        android:layout_marginStart="@dimen/_8sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/img_item"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/img_item"
+        app:layout_constraintTop_toTopOf="@+id/img_item"
+        android:layout_marginEnd="@dimen/_195sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        tools:text="Yasmine Issam"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-black"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/post_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/img_item"
+        app:layout_constraintTop_toBottomOf="@id/user_name"
+        android:layout_marginEnd="@dimen/_234sdp"
+        tools:text="1 hour ."
+        android:fontFamily="sans-serif"/>
+
+
+    <ImageButton
+        android:layout_width="@dimen/_13sdp"
+        android:layout_height="@dimen/_13sdp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:src="@drawable/ic_baseline_people_24"
+        app:layout_constraintStart_toEndOf="@id/post_time"
+        app:layout_constraintTop_toBottomOf="@id/user_name"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"
+        android:contentDescription="@string/todo" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/img_item"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/_37sdp"
+        android:layout_marginEnd="@dimen/_125sdp"
+        tools:text="this is post to try facebook fake application"/>
+
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/img_post"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_200sdp"
+        app:layout_constraintTop_toBottomOf="@id/post"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/_10sdp"
+        tools:src="@drawable/post_image"/>
+
+    <View
+        android:id="@+id/line3"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:background="#C9CDCE"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layout_constraintTop_toBottomOf="@id/img_post"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/like_btn"
+        android:layout_width="@dimen/_105sdp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:text="@string/like"
+        android:textColor="#65676B"
+        app:icon="@drawable/ic_outline_thumb_up_24"
+        app:iconTint="#878787"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line3"
+        tools:ignore="TextContrastCheck" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/comment_btn"
+        android:layout_width="@dimen/_110sdp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/line3"
+        app:layout_constraintStart_toEndOf="@id/like_btn"
+        android:text="@string/comment"
+        app:icon="@drawable/ic_outline_mode_comment_24"
+        app:iconTint="#878787"
+        android:backgroundTint="@color/white"
+        android:textColor="#65676B"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/share_btn"
+        android:layout_width="@dimen/_105sdp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/line3"
+        app:layout_constraintStart_toEndOf="@id/comment_btn"
+        android:backgroundTint="@color/white"
+        app:icon="@drawable/ic_outline_reply_24"
+        app:iconTint="#878787"
+        android:text="@string/share"
+        android:textColor="#65676B"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_8sdp"
+        app:layout_constraintTop_toBottomOf="@id/comment_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="#C9CDCE"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
